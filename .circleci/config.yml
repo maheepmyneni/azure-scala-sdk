@@ -21,7 +21,7 @@ jobs:
       - checkout
       - run:
           name: Compile source
-          command: sbt test
+          command: sbt compile
   test:
     docker:
       - image: circleci/openjdk:11-jdk
@@ -33,4 +33,4 @@ jobs:
       - checkout
       - run:
           name: Run tests
-          command: sbt test
+          command: sbt compile
